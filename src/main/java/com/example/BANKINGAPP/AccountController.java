@@ -17,7 +17,7 @@ public class AccountController {
         return accountService.createAccount(account);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public Account getAccount(@PathVariable Long id) {
         return accountService.getAccount(id).orElseThrow(() -> new RuntimeException("Account not found"));
     }
