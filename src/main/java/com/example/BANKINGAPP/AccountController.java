@@ -1,5 +1,6 @@
 package com.example.BANKINGAPP;
 
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,13 +24,13 @@ public class AccountController {
     }
 
     @PostMapping("/{id}/deposit")
-    public Account deposit(@PathVariable Long id, @RequestBody Map<String, Double> request) {
+    public Account deposit(@PathVariable Long id, @NotNull @RequestBody Map<String, Double> request) {
         Double amount = request.get("amount");
         return accountService.deposit(id, amount);
     }
 
     @PostMapping("/{id}/withdraw")
-    public Account withdraw(@PathVariable Long id, @RequestBody Map<String, Double> request) {
+    public Account withdraw(@PathVariable Long id, @RequestBody @NotNull Map<String, Double> request) {
         Double amount = request.get("amount");
         return accountService.withdraw(id, amount);
     }
