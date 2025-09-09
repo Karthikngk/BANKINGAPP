@@ -9,9 +9,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/accounts")
 public class AccountController {
-
     @Autowired
-    private AccountService accountService;
+    public AccountService accountService;
 
     @PostMapping
     public Account createAccount(@RequestBody Account account) {

@@ -9,6 +9,7 @@ public class AccountService {
 
     @Autowired
     private AccountRepository accountRepository;
+    private  Account account;
 
     public Account createAccount(Account account) {
 
@@ -36,5 +37,5 @@ public class AccountService {
 
         account.setBalance(account.getBalance() - amount);
         return accountRepository.save(account);
-    }
-}
+
+}}

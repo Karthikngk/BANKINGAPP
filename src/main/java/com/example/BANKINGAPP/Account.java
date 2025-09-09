@@ -1,5 +1,6 @@
 package com.example.BANKINGAPP;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,6 +24,7 @@ public class Account {
 
     // No-args constructor (required by JPA)
     public Account() {
+
     }
 
     // All-args constructor (optional but useful)
