@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>BANKINGAPP</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BANKINGAPP</name>
+	<name>BANKING</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -60,6 +60,11 @@
 			<version>RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -82,13 +87,6 @@
 				<configuration>
 					<excludes>
 						<exclude>
-
-							<dependency>
-								<groupId>org.hibernate</groupId>
-								<artifactId>hibernate-core</artifactId>
-								<version>7.1.0.Final</version>
-								<type>pom</type>
-							</dependency>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
