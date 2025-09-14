@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: karthikngkbankingapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karthikngkbankingapp
+  template:
+    metadata:
+      labels:
+        app: karthikngkbankingapp 
+    spec:
+      containers:
+        - name: karthikngkbankingapp 
+          image: karthikngkacr.azurecr.io/karthikngkbankingapp
+          ports:
+          - containerPort: 9090
